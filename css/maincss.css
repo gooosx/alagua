@@ -1,0 +1,237 @@
+/*Resets */
+body {
+  font-family: PT Sans, sans-serif;
+  margin: 0px; }
+
+/*GRILLA */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 500px;
+  grid-gap: 0px;
+  grid-template-areas: 'header header header' 'main main main' 'footer footer footer'; }
+
+.grid-container div {
+  padding: 5px;
+  width: 100%; }
+
+/*Secciones de grilla */
+#header {
+  grid-area: header;
+  width: 100vw;
+  height: 100px;
+  background-color: #00689f;
+  background-image: linear-gradient(#02486e, #00689f); }
+
+#main {
+  grid-area: main;
+  width: 60vw;
+  justify-self: center; }
+
+#footer {
+  grid-area: footer;
+  width: 60vw;
+  justify-self: center; }
+
+/*menu */
+.flex-menu {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none; }
+  .flex-menu li {
+    list-style-type: none;
+    margin: 1px; }
+
+/*clases sueltas */
+.textjust {
+  text-align: justify;
+  padding: 20px; }
+
+.map {
+  width: 100%; }
+
+h1 {
+  font-weight: 700;
+  font-size: 28px; }
+
+h2 {
+  font-weight: 700;
+  font-size: 25px; }
+
+h3 {
+  font-weight: 700;
+  font-size: 20px; }
+
+.navcenter {
+  background-color: #02486e;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center; }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.main-img {
+  width: 600px;
+  height: 200px;
+  background-image: url("../public/images/main600.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.pos-modal {
+  top: 40vh;
+  text-align: center !important; }
+
+/* distribuye elemntos en flex */
+.mueve {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100wv;
+  align-items: stretch;
+  text-align: justify; }
+
+/* ajustes de pagina SOMOS */
+.profes div {
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1,3;
+  border-radius: 10px;
+  background-color: #e7f1ff;
+  width: 230px;
+  height: 420px;
+  justify-content: center;
+  align-items: center; }
+
+/*animacion giratoria */
+.anim {
+  animation-name: anim-profe;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 0s; }
+
+@keyframes anim-profe {
+  0% {
+    transform: rotateY(0deg); }
+  50% {
+    transform: rotateY(180deg);
+    filter: sepia(200%); }
+  100% {
+    transform: rotateY(360deg); } }
+
+/* ajustes para caja de textos en HORARIOS */
+.caja-adv p {
+  padding: 20px;
+  font-size: 15px;
+  color: #0c63e4;
+  line-height: 1,3;
+  border-radius: 10px;
+  background-color: #e7f1ff; }
+
+/* seteo resolucion media */
+@media only screen and (min-width: 600px) {
+  .navcenter {
+    background-color: #02486e;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center; }
+  .flex-menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 10px; }
+  .main-img {
+    width: 50px;
+    height: 400px;
+    background-image: url("../public/images/main300.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px; }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 20px; }
+  .mueve {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    align-items: stretch;
+    text-align: justify;
+    justify-self: end; }
+    .mueve div iframe {
+      justify-self: end; }
+  .alinea {
+    width: 15%; }
+  .map iframe {
+    width: 50%;
+    justify-self: stretch; }
+  h2 {
+    text-align: left; }
+  #main {
+    grid-area: main;
+    width: 80vw;
+    justify-self: center; }
+  #header {
+    grid-area: header;
+    width: 100vw;
+    height: 150px;
+    background-color: #00689f; } }
+
+/* seteo resoluci'on alta */
+@media only screen and (min-width: 1200px) {
+  .navcenter {
+    background-color: #02486e;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center; }
+  .flex-menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 10px; }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 20px; }
+  .mueve {
+    display: flex;
+    flex-direction: row;
+    padding: 0; }
+  #main {
+    grid-area: main;
+    width: 60vw;
+    justify-self: center; }
+  #header {
+    grid-area: header;
+    width: 100vw;
+    height: 150px;
+    background-color: #00689f; }
+  .map {
+    width: 50%; } }
