@@ -32,14 +32,12 @@ body {
     width: 100vw;
     height: 100px;
     background-color: $color-fondo;
-    background-image: linear-gradient($color-oscuro, $color-fondo);
-    // background-image: linear-gradient(#02486e, #00689f );
-    
+    background-image: linear-gradient($color-oscuro, $color-fondo);  
 }
 
 #main {
     grid-area: main;
-    width: 60vw;
+    // width: 60vw;
     justify-self: center;
 
 }
@@ -67,9 +65,11 @@ body {
     text-align: justify;
     padding: 20px;
 }
-.map {
+/*Tamano mapa */
+.map iframe{
     width: 100%;
   }
+  
 
 h1 {
     font-weight: 700;
@@ -118,13 +118,7 @@ h3 {
     flex-direction:column;
     padding: 20px;
     width: 100wv;
-    align-items: stretch;
     text-align: justify;
-
-
-    // div iframe {
-    //     width: 100wv;
-    // }
 }
 
 /* ajustes de pagina SOMOS */
@@ -170,7 +164,11 @@ h3 {
     border-radius: 10px;
     background-color: $color-claro ;
 }
-
+/* seteo tamano video clases */
+.video {
+    width: 400px;
+    height:300px;
+}
 /* seteo resolucion media */
 @media only screen and (min-width: 600px) {
     .navcenter {
@@ -213,7 +211,7 @@ h3 {
     .mueve {
         display: flex;
         flex-direction: row ;
-        padding: 5px;
+        padding: 20px;
         align-items: stretch;
         text-align: justify;
         justify-self: end;
@@ -221,11 +219,9 @@ h3 {
             justify-self: end;
         }
     }
-    .alinea {
-        width: 15%;
-    }
+
     .map iframe {
-        width: 50%;
+        width: 100%;
         justify-self: stretch;
       }
 
@@ -244,6 +240,11 @@ h3 {
         width: 100vw;
         height: 150px;
         background-color: #00689f;  
+    }
+    /* seteo tamano video clases */
+    .video {
+        width: 600px;
+        height: 350px;
     }
 
 }
@@ -296,4 +297,8 @@ h3 {
     .map {
         width: 50%;
       }
+    .video {
+    width: 720px;
+    height: 480px;
+    }
 }
